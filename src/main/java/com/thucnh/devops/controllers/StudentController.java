@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+
 public class StudentController {
     @GetMapping("/test")
-    public ResponseEntity<String> testDevOps() {
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(getString());
+    public String testDevOps() {
+        return getString();
     }
 
     public String getString() {
