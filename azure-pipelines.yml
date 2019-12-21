@@ -41,13 +41,11 @@ stages:
               SourceFolder: '$(System.DefaultWorkingDirectory)'
               Contents: '**/target/*.?(war|jar)'
               TargetFolder: $(Build.ArtifactStagingDirectory)
-
-          - upload: $(Build.ArtifactStagingDirectory)
-            artifact: drop
-      - task: PublishPipelineArtifact@0
-          displayName: 'Publish pipeline artifacts'
-          inputs:
+          - task: PublishPipelineArtifact@0
+            displayName: 'Publish pipeline artifacts'
+            inputs:
             targetPath: $(Build.ArtifactStagingDirectory)
+
   - stage: Deploy
     displayName: Deploy stage
     dependsOn: Build
