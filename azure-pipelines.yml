@@ -70,7 +70,7 @@ stages:
               buildType: 'current'
 
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: g1erent'
+            displayName: 'Azure Web App Deploy: testdevops'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux

@@ -17,6 +17,6 @@ public class TestController {
                 .body(generateString());
     }
     public String generateString(){
-        return "Test DevOps";
+        return "Test DevOps-Updated";
     }
 }
