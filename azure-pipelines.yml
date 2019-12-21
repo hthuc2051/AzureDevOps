@@ -45,12 +45,7 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
-    - task: AzureWebApp@1
-      inputs:
-        azureSubscription: 'Azure for Students Starter (98c37551-79e2-421a-9e1e-f9cf4fd9c646)'
-        appType: 'webAppLinux'
-        appName: 'azuretestdevops'
-        package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+   
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
