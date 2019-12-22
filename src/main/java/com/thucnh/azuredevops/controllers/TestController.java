@@ -17,6 +17,6 @@ public class TestController {
                 .body(generateString());
     }
     public String generateString(){
-        return "Updated String 23/12/2019 latest";
+        return "Updated String 23/12/2019 final";
     }
 }
