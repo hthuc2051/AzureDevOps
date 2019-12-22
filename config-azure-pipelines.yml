@@ -46,7 +46,9 @@ stages:
             displayName: 'Publish pipeline artifacts'
             inputs:
               targetPath: $(Build.ArtifactStagingDirectory)
-
+              
+          - upload: $(Build.ArtifactStagingDirectory)
+            artifact: drop
 
   - stage: Deploy
     displayName: Deploy stage
