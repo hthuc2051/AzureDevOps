@@ -66,10 +66,10 @@
                     </appSettings>
 
                     <!-- Web App information -->
-                    <resourceGroup>g1erent</resourceGroup>
-                    <appName>g1erent</appName>
+                    <resourceGroup>azuretestdevops</resourceGroup>
+                    <appName>azuretestdevops</appName>
                     <region>eastasia</region>
-
+                    <pricingTier>F1</pricingTier>
                     <!-- Java Runtime Stack for Web App on Linux-->
                     <linuxRuntime>jre8</linuxRuntime>
                 </configuration>
