@@ -17,6 +17,6 @@ public class TestController {
                 .body(generateString());
     }
     public String generateString(){
-        return "Updated String 23/12/2019 - Test Azure DevOps 09:49";
+        return "Updated String 23/12/2019 - Test Azure DevOps 11:06";
     }
 }
