@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @RestController
 @RequestMapping("/api")
 public class TestController {
@@ -17,6 +20,8 @@ public class TestController {
                 .body(generateString());
     }
     public String generateString(){
-        return "Updated String 27/12/2019 - Test Azure DevOps 11:06";
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return "Updated" +  sdf.format(date);
     }
 }
