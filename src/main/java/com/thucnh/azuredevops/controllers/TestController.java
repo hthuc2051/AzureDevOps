@@ -14,14 +14,19 @@ import java.util.Date;
 public class TestController {
 
     @GetMapping("/test")
-    public ResponseEntity<String> getString() {
+    public ResponseEntity<Integer> computeTwoInteger(Integer a, Integer b) {
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(generateString());
+                .body(compute(a, b));
     }
-    public String generateString(){
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        return "Updated" +  sdf.format(date);
+
+    public Integer compute(Integer a, Integer b) {
+        return a + b;
+    }
+    @GetMapping("/getIntNum")
+    public ResponseEntity<Integer> getInteger() {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(1);
     }
 }
