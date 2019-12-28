@@ -13,7 +13,7 @@ public class StudentWork {
     }
 
     public String computeQuestion3(Integer a, Integer b) {
-        return a + b + "Test3";
+        return a + b + "Modify Test 3";
     }
 
     public String computeQuestion4(Integer a, Integer b) {
