@@ -14,7 +14,6 @@ class AzuredevopsApplicationTests {
     @Autowired
     private TemplateQuestion templateQuestion;
 
-
     @Test
     public void checkQuestion1() {
         assertEquals(Integer.valueOf(5), templateQuestion.question1(3, 2));
@@ -32,7 +31,7 @@ class AzuredevopsApplicationTests {
 
     @Test
     public void checkQuestion4() {
-        assertEquals("5" + "Test3", templateQuestion.question4(3, 2));
+        assertEquals("5" + "Test4", templateQuestion.question4(3, 2));
     }
 
 }
