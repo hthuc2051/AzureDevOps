@@ -28,6 +28,10 @@ class AzuredevopsApplicationTests {
 		assertEquals(Integer.valueOf(10), todoService.compute(3, 2));
 	}
 	@Test
+	public void setUp2() {
+		assertEquals(Integer.valueOf(6), todoService.compute(3, 2));
+	}
+	@Test
 	void test1() {
 		System.out.println('a');
 	}
