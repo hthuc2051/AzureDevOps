@@ -1,39 +1,38 @@
 package com.thucnh.azuredevops;
 
-import com.thucnh.azuredevops.controllers.TodoService;
+import com.thucnh.azuredevops.template.TemplateQuestion;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @SpringBootTest
 class AzuredevopsApplicationTests {
+
     @Autowired
-    private TodoService todoService;
+    private TemplateQuestion templateQuestion;
+
 
     @Test
-    void contextLoads() {
-        System.out.println('a');
+    public void checkQuestion1() {
+        assertEquals(Integer.valueOf(5), templateQuestion.question1(3, 2));
     }
 
     @Test
-	public void setUp() {
-		assertEquals(Integer.valueOf(5), todoService.compute(3, 2));
-	}
-	@Test
-	public void setUp1() {
-		assertEquals(Integer.valueOf(10), todoService.compute(3, 2));
-	}
-	@Test
-	public void setUp2() {
-		assertEquals(Integer.valueOf(6), todoService.compute(3, 2));
-	}
+    public void checkQuestion2() {
+        assertEquals(Integer.valueOf(5), templateQuestion.question2(3, 2));
+    }
 
-	@Test
-	void test2() {
-		System.out.println('a');
-	}
+    @Test
+    public void checkQuestion3() {
+        assertEquals("5" + "Test3", templateQuestion.question3(3, 2));
+    }
+
+    @Test
+    public void checkQuestion4() {
+        assertEquals("5" + "Test3", templateQuestion.question4(3, 2));
+    }
+
 }
