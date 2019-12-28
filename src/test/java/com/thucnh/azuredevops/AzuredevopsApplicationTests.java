@@ -31,10 +31,7 @@ class AzuredevopsApplicationTests {
 	public void setUp2() {
 		assertEquals(Integer.valueOf(6), todoService.compute(3, 2));
 	}
-	@Test
-	void test1() {
-		System.out.println('a');
-	}
+
 	@Test
 	void test2() {
 		System.out.println('a');
