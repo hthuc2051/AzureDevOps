@@ -6,10 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TemplateQuestion {
 
+    // Template questions from teacher
+
     StudentWork studentWork = new StudentWork();
 
     public Integer question1(Integer a, Integer b) {
-
         return studentWork.computeQuestion1(a, b);
     }
 

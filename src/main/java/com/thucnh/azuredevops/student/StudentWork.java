@@ -2,7 +2,7 @@ package com.thucnh.azuredevops.student;
 
 public class StudentWork {
 
-    // Student work in here
+    // Student works here
 
     public Integer computeQuestion1(Integer a, Integer b) {
         return a + b;
@@ -13,10 +13,11 @@ public class StudentWork {
     }
 
     public String computeQuestion3(Integer a, Integer b) {
-        return a + b + "Modify Test 3";
+        return a + b +"Test3";
     }
 
     public String computeQuestion4(Integer a, Integer b) {
         return a + b + "Test4";
     }
+
 }
