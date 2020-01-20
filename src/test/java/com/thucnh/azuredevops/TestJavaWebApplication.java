@@ -2,6 +2,7 @@ package com.thucnh.azuredevops;
 
 import com.thucnh.azuredevops.template.TemplateQuestion;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -9,14 +10,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest
-class AzuredevopsApplicationTests {
+@ExtendWith(TestResultLoggerExtension.class)
+class TestJavaWebApplication {
 
     @Autowired
     private TemplateQuestion templateQuestion;
 
     @Test
     public void checkQuestion1() {
-        assertEquals(Integer.valueOf(5), templateQuestion.question1(3, 2));
+        assertEquals(Integer.valueOf(5), templateQuestion.question1(3, 1));
     }
 
     @Test
